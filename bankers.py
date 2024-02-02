@@ -10,6 +10,8 @@ for i in range(numbers_of_jobs):
     allocation = int(input("Enter Job Allocation: "))
     max_allocation = int(input("Enter Job Max: "))
     job_need = max_allocation - allocation
+    if job_need < 0:
+        deadlock = True
     jobs[name] = [allocation, max_allocation, job_need]
 
 total_of_allocations = 0
