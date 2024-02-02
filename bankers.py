@@ -16,7 +16,7 @@ total_of_allocations = 0
 for job_name, values in jobs.items():
     total_of_allocations += values[0]
     
-if total_of_allocation > total_resources:
+if total_of_allocations > total_resources:
     deadlock = True
 
 available = total_resources - total_of_allocations
