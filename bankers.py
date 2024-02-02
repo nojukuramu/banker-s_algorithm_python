@@ -37,8 +37,9 @@ while jobs:
     i = i + 1
     if i > numbers_of_jobs:
         deadlock = True
-        print("There's a Deadlock")
         break
         
 if deadlock == False:
     print(f"Safe Sequence: {sequence}")
+else:
+    print("Unsafe: DEADLOCK DETECTED")
