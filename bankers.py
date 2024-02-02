@@ -16,7 +16,8 @@ for job_name, values in jobs.items():
 available = total_resources - total_of_allocations
 
 rtrn= 0
-while available < total_resources:
+i = 0
+while jobs:
     for job_name, values in jobs.items():
         if available < values[2]:
             pass
@@ -30,3 +31,7 @@ while available < total_resources:
             print("{:>2}exit {:<3} {:<3} {:<3}".format(job_name, "", rtrn, available))
             del jobs[job_name]
             break
+    i = i + 1
+    if i >= numbers_of_jobs:
+        print("There's a Deadlock")
+        break
