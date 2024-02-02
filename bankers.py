@@ -28,3 +28,5 @@ while available < total_resources:
             available += values[1]
 
             print("{:>2}exit {:<3} {:<3} {:<3}".format(job_name, "", rtrn, available))
+            del jobs[job_name]
+            break
